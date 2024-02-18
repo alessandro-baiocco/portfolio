@@ -1,0 +1,8 @@
+.home {
+  height: calc(100vh - 56px);
+  background-image: url("https://64.media.tumblr.com/29b3c9b871e9908d11b4ed58768df913/efe365ecb69710cf-c5/s500x750/c8714f566f123b456513355c3f38311f4ca89de0.gif");
+  object-fit: cover;
+}
+.home p {
+  font-family: "Kode Mono", monospace;
+}
