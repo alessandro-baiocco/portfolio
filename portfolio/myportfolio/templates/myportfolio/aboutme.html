@@ -1,0 +1,23 @@
+{% extends "myportfolio/common.html" %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-3"><p>ciao</p></div>
+    <div class="col-9">
+      <div class="row gap-3">
+        {% for language in languages %}
+        <div class="card text-bg-primary col-3 p-0 justify-content-center">
+          <div class="p-0" style="background-color: #ffffff4d">
+            <img src="{{language.image}}" class="card-img-top" alt="{{language.title}}" style="height: 200px" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{language.title}}</h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,8 +1,35 @@
-.home {
-  height: calc(100vh - 56px);
-  background-image: url("https://64.media.tumblr.com/29b3c9b871e9908d11b4ed58768df913/efe365ecb69710cf-c5/s500x750/c8714f566f123b456513355c3f38311f4ca89de0.gif");
-  object-fit: cover;
-}
 .home p {
   font-family: "Kode Mono", monospace;
+}
+.home .fw-bold {
+  font-family: "Kode Mono", monospace;
+  animation: myAnimName 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate-reverse both;
+}
+
+.my-bg {
+  height: calc(100vh - 56px);
+  position: absolute;
+  z-index: -20;
+}
+.my-bg img {
+  height: 100%;
+  width: 100%;
+}
+
+.blueCard {
+  background-color: aqua !important;
+}
+
+@keyframes myAnimName {
+  0% {
+    letter-spacing: 0.6em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
