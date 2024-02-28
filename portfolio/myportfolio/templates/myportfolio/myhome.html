@@ -1,4 +1,4 @@
-{% extends "myportfolio/common.html" %} {% block content %}
+{% extends "myportfolio/common.html" %}{% load static %} {% block content %}
 <div class="container-fluid p-0 home pt-5">
   <div class="container">
     <div class="row">
@@ -6,10 +6,13 @@
         <img src="https://i.pinimg.com/736x/f9/dd/b4/f9ddb48c4d9010e8333a319d0213ca35.jpg" class="img-fluid" />
       </div>
       <div class="col-9">
-        <p class="text-light fs-1">Alessandro Baiocco</p>
-        <p class="text-light fs-1 fw-bold">FULL-STACK DEVELOPER</p>
+        <div style="width: fit-content">
+          <p class="text-light fs-1">Alessandro Baiocco</p>
+          <p class="text-light fs-1 fw-bold text-align-start">FULL-STACK DEVELOPER</p>
+        </div>
       </div>
     </div>
   </div>
+  <script src="{% static 'javascript/home.js' %}"></script>
 </div>
 {% endblock %}

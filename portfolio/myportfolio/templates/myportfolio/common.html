@@ -16,11 +16,14 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">Navbar</a>
+        <a class="navbar-brand text-light" href="/"
+          ><img src="{% static "assets/logotransparent2.png" %}" style="max-height:70px" /></a
+        >
+
         <button
-          class="navbar-toggler text-light"
+          class="navbar-toggler text-light nav-button"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -33,26 +36,24 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active text-light fw-bold" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-light fw-bold" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light fw-bold" href="/about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="#">Project</a>
+              <a class="nav-link text-light fw-bold" href="/project">Project</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid p-0 my-bg">
-      <img src="https://www.chromethemer.com/download/hd-wallpapers/blue-technology-3840x2160.jpg" alt="bg" />
-    </div>
     {% block content %} {% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="{% static 'javascript/script.js' %}"></script>
   </body>
 </html>
