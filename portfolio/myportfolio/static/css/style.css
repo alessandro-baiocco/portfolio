@@ -1,5 +1,6 @@
 .home p {
   font-family: "Kode Mono", monospace;
+  font-size: 2rem;
 }
 .home .fw-bold {
   letter-spacing: 0.3em;
@@ -7,8 +8,11 @@
   border-right: 0.15em solid rgb(0, 153, 255);
   white-space: nowrap;
   margin: 0 auto;
-  font-family: "Kode Mono", monospace;
   animation: typing 8s steps(40, end) infinite alternate both, blink-caret 0.75s infinite;
+}
+
+.myButtons button {
+  width: 120px;
 }
 
 nav {
@@ -55,6 +59,10 @@ body {
     width: 100%;
   }
 
+  90% {
+    width: 0;
+  }
+
   to {
     width: 0;
   }
@@ -72,7 +80,7 @@ body {
 }
 
 .dissolve {
-  animation: dissolve 2s ease 0s 1 normal forwards;
+  animation: dissolve 1s ease 0s 1 normal forwards;
 }
 
 @keyframes dissolve {
@@ -96,6 +104,6 @@ body {
 
   25%,
   75% {
-    opacity: 0;
+    opacity: 0.4;
   }
 }
