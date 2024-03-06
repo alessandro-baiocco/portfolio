@@ -17,5 +17,5 @@ def aboutme(request):
     return render(request , 'myportfolio/aboutme.html' , {'languages': languages})
 
 def myproject(request):
-    project = Project.objects.all()
-    return render(request , 'myportfolio/myproject.html' , {'project': project})
+    projects = Project.objects.all()
+    return render(request , 'myportfolio/myproject.html' , {'projects': projects})

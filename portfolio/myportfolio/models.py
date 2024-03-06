@@ -13,9 +13,10 @@ class Language(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=30)
     image = models.ImageField()
+    description = models.CharField(blank=True , max_length=300 )
     linkProject = models.CharField(max_length=200)
-    linkVideo = models.CharField(max_length=200 ,default="")
-    linkHost = models.CharField(max_length=200 ,default="")
+    linkVideo = models.CharField(blank=True , max_length=200 )
+    linkHost = models.CharField(blank=True , max_length=200 )
     
     def __str__(self):
         return self.title

@@ -1,27 +1,49 @@
-{% extends "myportfolio/common.html" %}{% block content %}
+{% extends "myportfolio/common.html" %}{% block content %} {% load static%}
 
 <div class="container-fluid my-3">
   <div class="row">
     <div class="col-lg-6 col-12">
-      <h1 class="fw-bold text-light">PRESENTAZIONE</h1>
-      <p class="text-light fw-bold">
-        Sono un giovane innamorato del mondo della programmazione e dell’informatica. Ho scelto di mettere al mio primo
-        posto questa passione per farne un lavoro e diventare un professionista IT, ed ho appena concluso con successo e
-        soddisfazione, il Bootcamp di EPICODE. Il mio obiettivo è quello di trovare un ambiente dinamico ed innovativo
-        che mi permetta di crescere come sviluppatore
+      <p class="fw-bold text-light fs-3">PRESENTAZIONE</p>
+      <p class="text-light fw-bold fs-4">
+        Un saluto a chi sta leggendo,Il mio nome (come avrete gia letto dalla home) è Alessandro Baiocco Sono un giovane
+        che si è appassionato al mondo della programmazione e dell’informatica.
+      </p>
+      <p class="fw-bold text-light fs-3">LA MIA STORIA</p>
+      <p class="text-light fw-bold fs-4">
+        Già a metà degli anni delle superiori mi capitava di sperimentare assemblandomi da solo le mie macchine. Poi
+        negli ormai lontani anni della pandemia (circa 2020) Ho cominciato a entrare nel mondo della proggramazione e
+        dopo 3 anni di alternanza lavoro e studio era ora di fare un grande passo. mi sono preso una pausa dal mio
+        lavoro per mettere al mio primo posto questa passione per farne un lavoro e diventare un professionista IT,
+        concludento con successo e soddisfazione, il Bootcamp di EPICODE.
+      </p>
+      <p class="fw-bold text-light fs-3">COSA SO FARE?</p>
+      <p class="text-light fw-bold fs-4">
+        Vicino a questo testo potete osservare una lista di simpatiche tecnologie o linguaggi. Col tempo e con la
+        pratica li ho imparati ed utilizzati per progetti personali e/o a scopi didattici, volendo potete dare
+        un'occhiata anche alla sezione <a href="/project" class="text-decoration-none border border-1">PROJECT</a> dove
+        testo i miei apprendimenti e ne pubblico il codice.
+      </p>
+      <p class="fw-bold text-light fs-3">COSA CERCO?</p>
+      <p class="text-light fw-bold fs-4">
+        Sto cercando un ambiente giovane e dinamico con esperti del settore che mi permettano di imparare il più
+        possibile da questo mondo
       </p>
     </div>
     <div class="col-lg-6 col-12">
       <div class="justify-content-center row gap-2">
         {% for language in languages %}
 
-        <div class="col-lg-2 col-md-3 col-4 p-2" draggable="true">
-          <a href="{{language.linkLang}}" class="text-decoration-none">
+        <div
+          class="col-lg-2 col-md-3 col-4 p-2 animLang"
+          onmouseenter="removeAnimation(event)"
+          onmouseleave="restoreAnimation(event)"
+        >
+          <a href="{{language.linkLang}}" class="text-decoration-none" target="_blank">
             <div class="p-0">
               <img src="{{language.image}}" class="card-img-top" alt="{{language.title}}" />
             </div>
             <div>
-              <h5 class="card-title text-light">{{language.title}}</h5>
+              <h5 class="card-title text-light text-center">{{language.title}}</h5>
             </div></a
           >
         </div>
@@ -30,5 +52,20 @@
     </div>
   </div>
 </div>
+<p class="text-light text-center fs-2">Contattami</p>
+<div class="container-fluid text-light d-flex justify-content-center">
+  <form action="mailto:baioccoalessandro97@gmail.com" method="post">
+    <div class="container-fluid d-flex flex-column">
+      <label class="fw-bold my-2" for="name">Inserisci il tuo nome</label>
+      <input class="text-light mb-2" type="text" name="name" placeholder="il tuo nome" required />
+      <label class="fw-bold my-2" for="email">Inserisci la tua email</label>
+      <input class="text-light mb-2" type="email" name="email" placeholder="la tua email" required />
+      <label class="fw-bold my-2" for="messagge">Inserisci il tuo messaggio</label>
+      <textarea name="message" placeholder="il tuo messaggio" class="mb-2" required></textarea>
+      <input type="submit" class="btn btn-primary" />
+    </div>
+  </form>
+</div>
+<script src="{% static 'javascript/languageAnim.js' %}"></script>
 
 {% endblock %}
