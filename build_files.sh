@@ -1,4 +1,5 @@
 echo "Building the project..."
+venv/bin/activate
 python -m pip install -r requirements.txt
 
 echo "Make Migration..."
