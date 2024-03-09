@@ -17,6 +17,12 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 
+import environ
+
+
+env = environ.Env()
+
+environ.Env.read_env() 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -25,9 +31,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 SECRET_KEY = 'django-insecure-tr7wi_nj-kuh6!zjn%*6s70*f6qdodp#9pg*55(se!cyclocz-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app' , '127.0.0.1' , 'localhost:8000' , 'localhost']
 
 
 # Application definition
@@ -76,12 +82,31 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#render postgreSQL datatbase
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(env('DATABASE_URL'))
+    
+    
+    
 }
+
+
+
+
+
+
+
+
 
 
 # Password validation
@@ -124,3 +149,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+WSGI_APPLICATION = 'portfolio.wsgi.app'
