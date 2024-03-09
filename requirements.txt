@@ -29,7 +29,6 @@ Pygments==2.17.2
 pypiwin32==223
 pytest==7.3.2
 python-dotenv==1.0.1
-pywin32==306
 requests==2.31.0
 soupsieve==2.5
 SpeechRecognition==3.10.1
