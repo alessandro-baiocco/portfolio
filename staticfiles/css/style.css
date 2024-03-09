@@ -1,0 +1,301 @@
+p {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home p {
+  font-family: "Kode Mono", monospace;
+  font-size: 2rem;
+}
+.home .fw-bold {
+  letter-spacing: 0.3em;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(0, 153, 255);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 8s steps(40, end) infinite alternate both, blink-caret 0.75s infinite;
+}
+
+.myButtons button {
+  width: 120px;
+}
+
+nav {
+  background-color: rgba(57, 154, 219, 0.282);
+  border-bottom: solid 2px white;
+}
+
+.nav-button {
+  background-color: rgba(0, 255, 255, 0.412);
+}
+
+body {
+  background: linear-gradient(326deg, rgba(57, 153, 219, 1) 39%, rgba(70, 198, 192, 1) 92%);
+  min-height: 100vh;
+}
+
+.blueCard {
+  background-color: aqua !important;
+}
+
+.invader {
+  animation: blink 3s ease 0s infinite normal forwards;
+}
+
+/* -------------- about me ------------------- */
+
+.jelly {
+  animation: jelly 4s ease 0s infinite normal forwards;
+}
+
+.shake {
+  animation: shake 1s ease 0s infinite normal forwards;
+}
+
+.pulse {
+  animation: pulse 4s ease 0s infinite normal forwards;
+}
+
+@media screen and (min-width: 576px) {
+  form {
+    width: 70%;
+  }
+}
+
+form input {
+  background-color: rgba(0, 0, 0, 0);
+  border: white solid 2px;
+}
+form textarea {
+  background-color: rgba(0, 0, 0, 0);
+  border: white solid 2px;
+}
+
+/* -------------- project ------------------- */
+.project {
+  height: 65vh;
+  position: relative;
+  border-bottom: solid 0.35em #39c088;
+}
+
+.project img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+
+.projectMenu {
+  height: 100%;
+  width: 100%;
+  background: rgba(23, 24, 32, 0.85);
+}
+
+@media screen and (min-width: 768px) {
+  .projectMenu {
+    width: 30%;
+    border-right: solid 0.35em #39c088;
+  }
+}
+
+.certificate {
+  background-color: rgba(0, 0, 0, 0.331);
+  border-block: solid 0.35em #39c088;
+  max-height: 100vh;
+}
+
+/*--------------------- animation -------------------------*/
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+
+  90% {
+    width: 0;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(75, 224, 234);
+  }
+}
+
+.dissolve {
+  animation: dissolve 1s ease 0s 1 normal forwards;
+}
+
+@keyframes dissolve {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes entrance {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
+@keyframes jelly {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(-6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(-2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(1.2deg);
+  }
+}
